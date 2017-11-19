@@ -1,0 +1,402 @@
+Boot and Recovery Environment for Embedded Devices
+Copyright (C) 2015 HackPascal <hackpascal@gmail.com>
+Build date 2015-09-21 [git-649aea1]
+Version 1.0 (r766)
+
+DRAM: 64MB
+Platform: MediaTek MT7620N ver 2, eco 2
+Board: Reference design
+Clocks: CPU: 580MHz, Bus: 193MHz
+Flash: Macronix MX25L12835E (16MB) on rt2880-spi
+rt2880-eth: Using MAC address 20:71:93:2a:62:8c
+eth0: MediaTek MT7620N built-in 5-port 10/100M switch
+
+Network started on eth0, inet addr 192.168.1.1, netmask 255.255.255.0
+
+Press any key to interrupt autoboot ... 0   
+
+Trying to boot firmware from 0x00050000 in flash bank 0 ...
+Reading data into memory ...
+U-Boot firmware image header detected.
+    Image Name:   MIPS OpenWrt Linux-3.18.44
+    Data Size:    1146255 Bytes
+    Load Address: 80000000
+    Entry Point:  80000000
+Uncompressing data (LZMA) ... done.
+Flushing cache ... done.
+
+Starting kernel at 0x80000000...
+
+[    0.000000] Linux version 3.18.44 (simon@simon) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r49389) ) #9 Sun Dec 4 17:35:47 CST 2016
+[    0.000000] Board has DDR1
+[    0.000000] Analog PMU set to hw control
+[    0.000000] Digital PMU set to hw control
+[    0.000000] SoC Type: MediaTek MT7620N ver:2 eco:2
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019650 (MIPS 24KEc)
+[    0.000000] MIPS: machine is WRTNODE
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 04000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x03ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x03ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x00000000-0x03ffffff]
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+[    0.000000] Kernel command line: console=ttyS0,57600 rootfstype=squashfs,jffs2
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Writing ErrCtl register=0005e1c0
+[    0.000000] Readback ErrCtl register=0005e1c0
+[    0.000000] Memory: 61376K/65536K available (2537K kernel code, 123K rwdata, 520K rodata, 140K init, 186K bss, 4160K reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:256
+[    0.000000] CPU Clock: 580MHz
+[    0.000000] systick: running - mult: 214748, shift: 32
+[    0.010000] Calibrating delay loop... 385.84 BogoMIPS (lpj=1929216)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.080000] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.090000] pinctrl core: initialized pinctrl subsystem
+[    0.100000] NET: Registered protocol family 16
+[    0.120000] rt2880_gpio 10000600.gpio: registering 24 gpios
+[    0.130000] rt2880_gpio 10000600.gpio: registering 24 irq handlers
+[    0.140000] rt2880_gpio 10000660.gpio: registering 32 gpios
+[    0.150000] rt2880_gpio 10000660.gpio: registering 32 irq handlers
+[    0.160000] rt2880_gpio 10000688.gpio: registering 1 gpios
+[    0.170000] rt2880_gpio 10000688.gpio: registering 1 irq handlers
+[    0.180000] Switched to clocksource systick
+[    0.190000] NET: Registered protocol family 2
+[    0.190000] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.210000] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.220000] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.230000] TCP: reno registered
+[    0.240000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.250000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.260000] NET: Registered protocol family 1
+[    0.270000] rt-timer 10000100.timer: maximum frequency is 2441Hz
+[    0.290000] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.310000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.320000] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.340000] msgmni has been set to 119
+[    0.350000] io scheduler noop registered
+[    0.350000] io scheduler deadline registered (default)
+[    0.360000] ralink-usb-phy usbphy: invalid resource
+[    0.370000] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+[    0.390000] console [ttyS0] disabled
+[    0.390000] 10000c00.uartlite: ttyS0 at MMIO 0x10000c00 (irq = 20, base_baud = 2500000) is a 16550A
+[    0.410000] console [ttyS0] enabled
+[    0.410000] console [ttyS0] enabled
+[    0.430000] bootconsole [early0] disabled
+[    0.430000] bootconsole [early0] disabled
+[    0.460000] m25p80 spi32766.0: mx25l12805d (16384 Kbytes)
+[    0.470000] 4 ofpart partitions found on MTD device spi32766.0
+[    0.480000] Creating 4 MTD partitions on "spi32766.0":
+[    0.490000] 0x000000000000-0x000000030000 : "u-boot"
+[    0.500000] 0x000000030000-0x000000040000 : "u-boot-env"
+[    0.510000] 0x000000040000-0x000000050000 : "factory"
+[    0.520000] 0x000000050000-0x000001000000 : "firmware"
+[    0.650000] 2 uimage-fw partitions found on MTD device firmware
+[    0.670000] 0x000000050000-0x000000167dcf : "kernel"
+[    0.680000] 0x000000167dcf-0x000001000000 : "rootfs"
+[    0.690000] mtd: device 5 (rootfs) set to be root filesystem
+[    0.700000] 1 squashfs-split partitions found on MTD device rootfs
+[    0.710000] 0x000000c20000-0x000001000000 : "rootfs_data"
+[    0.730000] ralink_soc_eth 10100000.ethernet eth0 (uninitialized): port 1 link up (100Mbps/Full duplex)
+[    0.750000] ralink_soc_eth 10100000.ethernet: loaded mt7620 driver
+[    0.760000] ralink_soc_eth 10100000.ethernet eth0: ralink at 0xb0100000, irq 5
+[    0.770000] rt2880_wdt 10000120.watchdog: Initialized
+[    0.790000] TCP: cubic registered
+[    0.790000] NET: Registered protocol family 17
+[    0.800000] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    0.830000] 8021q: 802.1Q VLAN Support v1.8
+[    0.850000] VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+[    0.870000] Freeing unused kernel memory: 140K (8031d000 - 80340000)
+[    3.800000] init: Console is alive
+[    3.810000] init: - watchdog -
+[    9.530000] usbcore: registered new interface driver usbfs
+[    9.540000] usbcore: registered new interface driver hub
+[    9.550000] usbcore: registered new device driver usb
+[    9.560000] exFAT: Version 1.2.9
+[    9.610000] SCSI subsystem initialized
+[    9.620000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    9.640000] ehci-platform: EHCI generic platform driver
+[    9.660000] phy phy-usbphy.0: remote usb device wakeup disabled
+[    9.670000] phy phy-usbphy.0: UTMI 16bit 30MHz
+[    9.680000] ehci-platform 101c0000.ehci: EHCI Host Controller
+[    9.690000] ehci-platform 101c0000.ehci: new USB bus registered, assigned bus number 1
+[    9.710000] ehci-platform 101c0000.ehci: irq 26, io mem 0x101c0000
+[    9.740000] ehci-platform 101c0000.ehci: USB 2.0 started, EHCI 1.00
+[    9.750000] hub 1-0:1.0: USB hub found
+[    9.760000] hub 1-0:1.0: 1 port detected
+[    9.770000] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    9.780000] ohci-platform: OHCI generic platform driver
+[    9.790000] ohci-platform 101c1000.ohci: Generic Platform OHCI controller
+[    9.810000] ohci-platform 101c1000.ohci: new USB bus registered, assigned bus number 2
+[    9.820000] ohci-platform 101c1000.ohci: irq 26, io mem 0x101c1000
+[    9.890000] hub 2-0:1.0: USB hub found
+[    9.900000] hub 2-0:1.0: 1 port detected
+[    9.930000] MTK MSDC device init.
+[    9.930000] mtk-sd: MediaTek MT6575 MSDC Driver
+[    9.940000] sdhci: Secure Digital Host Controller Interface driver
+[    9.960000] sdhci: Copyright(c) Pierre Ossman
+[    9.970000] sdhci-pltfm: SDHCI platform and OF driver helper
+[    9.980000] usbcore: registered new interface driver usb-storage
+[   10.870000] init: - preinit -
+[   14.680000] 8021q: adding VLAN 0 to HW filter on device eth0
+[   14.750000] random: mktemp urandom read with 23 bits of entropy available
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[   19.270000] jffs2: notice: (336) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[   19.310000] mount_root: switching to jffs2 overlay
+[   19.370000] procd: - early -
+[   19.380000] procd: - watchdog -
+[   20.170000] procd: - ubus -
+[   21.220000] procd: - init -
+Please press Enter to activate this console.
+[   26.800000] NET: Registered protocol family 10
+[   26.820000] gre: GRE over IPv4 demultiplexor driver
+[   26.830000] openvswitch: Open vSwitch switching datapath 2.3.90, built Dec  3 2016 19:51:41
+[   26.860000] NET: Registered protocol family 8
+[   26.870000] NET: Registered protocol family 20
+[   26.910000] RPC: Registered named UNIX socket transport module.
+[   26.920000] RPC: Registered udp transport module.
+[   26.930000] RPC: Registered tcp transport module.
+[   26.940000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[   26.970000] ntfs: driver 2.1.31 [Flags: R/O MODULE].
+[   26.990000] tun: Universal TUN/TAP device driver, 1.6
+[   27.000000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   27.030000] l2tp_core: L2TP core driver, V2.0
+[   27.040000] l2tp_netlink: L2TP netlink interface
+[   27.050000] ip_gre: GRE over IPv4 tunneling driver
+[   27.120000] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[   27.140000] PPP generic driver version 2.4.2
+[   27.180000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   27.330000] Netfilter messages via NETLINK v0.30.
+[   27.350000] ip_set: protocol 6
+[   27.410000] u32 classifier
+[   27.420000]     input device check on
+[   27.420000]     Actions configured
+[   27.430000] Mirror/redirect action on
+[   27.460000] nf_conntrack version 0.5.0 (961 buckets, 3844 max)
+[   27.480000] fuse init (API version 7.23)
+[   27.500000] Loading modules backported from Linux version v4.4-rc5-1913-gc8fdf68
+[   27.510000] Backport generated by backports.git backports-20151218-0-g2f58d9d
+[   27.540000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   27.620000] PPP MPPE Compression module registered
+[   27.640000] NET: Registered protocol family 24
+[   27.650000] PPTP driver version 0.8.5
+[   27.660000] usbcore: registered new interface driver ums-alauda
+[   27.680000] usbcore: registered new interface driver ums-cypress
+[   27.700000] usbcore: registered new interface driver ums-datafab
+[   27.710000] usbcore: registered new interface driver ums-freecom
+[   27.730000] usbcore: registered new interface driver ums-isd200
+[   27.740000] usbcore: registered new interface driver ums-jumpshot
+[   27.780000] usbcore: registered new interface driver ums-karma
+[   27.790000] usbcore: registered new interface driver ums-sddr09
+[   27.810000] usbcore: registered new interface driver ums-sddr55
+[   27.840000] usbcore: registered new interface driver ums-usbat
+[   27.920000] xt_time: kernel timezone is -0000
+[   28.080000] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[   28.240000] ieee80211 phy0: rt2x00_set_rt: Info - RT chipset 5390, rev 0500 detected
+[   28.250000] ieee80211 phy0: rt2x00_set_rf: Info - RF chipset 7620 detected
+[   81.040000] random: nonblocking pool is initialized
+[  174.940000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  176.550000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  207.030000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  208.560000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  287.250000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  288.760000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  378.160000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  380.320000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  415.590000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  417.200000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  447.680000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  449.230000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  533.240000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  534.800000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  624.150000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  625.730000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  656.240000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  657.840000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  741.800000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  743.340000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  779.240000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  780.790000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  864.800000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  866.460000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  896.890000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  898.560000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  961.060000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  962.620000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[  987.800000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[  989.800000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1014.540000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1016.060000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1051.970000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1053.550000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1110.800000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1112.400000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1137.540000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1139.240000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1196.360000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1197.910000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1223.100000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1224.680000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1255.190000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1256.760000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1297.970000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1299.570000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1378.190000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1379.790000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1431.660000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1433.300000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1495.840000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1497.390000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1613.490000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1615.190000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1709.750000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1711.450000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1736.480000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1738.060000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1811.350000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1812.960000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1859.480000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1861.080000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1934.350000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1935.940000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 1977.130000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 1978.660000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2094.780000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2096.360000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2153.610000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2155.280000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2196.390000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2197.940000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2298.000000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2299.520000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2340.780000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2342.410000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2431.690000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2433.350000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2479.820000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2481.470000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2576.080000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2577.660000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2624.210000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2625.790000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2699.080000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2700.650000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2816.730000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2818.300000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2907.640000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2909.270000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 2939.730000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 2941.430000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3009.250000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3010.850000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3057.380000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3059.070000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3148.290000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3149.950000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3180.380000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3181.910000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3298.030000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3299.620000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3383.590000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3385.270000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3421.030000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3422.580000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3469.160000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3470.800000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3517.290000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3519.240000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3640.280000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3641.880000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3779.330000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3780.950000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3864.890000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3866.490000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3896.980000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3898.600000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 3923.720000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 3925.340000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4003.930000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4005.600000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4068.100000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4069.840000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4137.620000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4139.250000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4191.100000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4192.840000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4255.280000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4256.820000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4292.710000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4294.310000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4362.230000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4363.900000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4495.920000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4497.630000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4544.050000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4545.820000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4618.920000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4620.540000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4709.830000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4711.410000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4736.570000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4738.130000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4806.090000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4807.730000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4859.570000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4861.220000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 4977.220000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 4978.760000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5100.220000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5101.940000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5148.350000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5150.190000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5217.870000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5219.410000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5314.130000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5315.770000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5410.390000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5411.960000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5458.520000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5460.090000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5533.390000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5534.920000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5576.170000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5577.750000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5640.340000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5641.940000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5699.170000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5700.690000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5768.690000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5770.310000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5816.820000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5818.390000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5894.700000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5917.350000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5934.470000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5936.360000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5961.230000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5962.840000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 5987.970000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 5989.620000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 6014.710000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 6016.490000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 6062.840000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 6064.430000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 6153.750000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 6155.270000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 6185.840000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 6187.380000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 6303.490000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 6305.080000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
+[ 6367.660000] ralink_soc_eth 10100000.ethernet eth0: port 1 link down
+[ 6369.180000] ralink_soc_eth 10100000.ethernet eth0: port 1 link up (100Mbps/Full duplex)
